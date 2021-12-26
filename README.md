@@ -75,3 +75,12 @@ Once that is done, you will probably notice that there is a directory called `Sa
 ```bash
 rm -rf Sample_sample_number
 ```
+
+Next, you should make a file with the list of directories. This `txt` file will come in handy for future steps of the GBS analysis.
+```bash
+ls Sample*/ -d | tr -d / > 211226_claudia_analysis_sample_directory_list.txt
+```
+This next step is necessary because we are working with paired-end reads. We are doing it because the file `211222_reneth_gwas_sample_names_and_numbers.csv` contains 2 lines per sample (one for the forward read and one for the reverse read).
+```bash
+awk 'FNR%2' 211226_claudia_analysis_sample_names_and_numbers.csv > 211226_claudia_analysis_file_list_every_other.csv
+```
