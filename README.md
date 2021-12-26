@@ -29,6 +29,9 @@ Since these are Itasca-C12 samples, it might also be helpful to have data from R
 ```bash
 ls /home/jkimball/data_delivery/umgc/2021-q4/211108_A00223_0697_BHNY3NDSX2/Kimball_Project_008/IC12*fastq.gz >> claudia_analysis_filenames.txt
 ```
+If you count the files again, you should get 400. We have 200 samples in total (there are 158 Itasca-C12 samples), so everything is in order.
+
+The next step is to move into the `R` statistical environment to go from file names to a workable CSV file that will be used in the next step of the directory structure setup.
 ```R
 # Read in data using the data.table package
 library(data.table)
@@ -57,7 +60,4 @@ write.csv(x, file="211226_claudia_analysis_sample_names_and_numbers.csv", row.na
 
 # Save table as an R object
 save(x, file="211226_claudia_analysis_sample_names_and_numbers.Rdata")
-If you count the files again, you should get 400. We have 200 samples in total (there are 158 Itasca-C12 samples), so everything is in order.
-
-The next step is to move into the `R` statistical environment to go from file names to a workable CSV file that will be used in the next step of the directory structure setup.
 ```
