@@ -61,3 +61,17 @@ write.csv(x, file="211226_claudia_analysis_sample_names_and_numbers.csv", row.na
 # Save table as an R object
 save(x, file="211226_claudia_analysis_sample_names_and_numbers.Rdata")
 ```
+After that is done, use the `CSV` file using `bash` to create the directory structure.<br>
+**Note:** The `echo $i` part is not really necessary. I just included it to watch the progress.
+```bash
+cat 211226_claudia_analysis_sample_names_and_numbers.csv | cut -f 1 -d , \
+	| while read i; do
+	d=Sample_$i
+	echo $i
+	mkdir -p $d
+	done
+```
+Once that is done, you will probably notice that there is a directory called `Sample_sample_number` which is an artefact of the code. I probably could change the code so that the header isn't interpreted as a sample name, but it's also super easy to just remove it after the code finishes. You can easily remove it with a one-liner:
+```bash
+rm -rf Sample_sample_number
+```
