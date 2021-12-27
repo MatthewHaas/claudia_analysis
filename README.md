@@ -140,7 +140,7 @@ The next step in the process is to trim the adapters. Since this is my second ti
 The script to submit for the adapter trimming is [run_cutadapt.sh](adapter_trimming/run_cutadapt.sh) which depends on/calls the script [cutadapt_wrapper_script.sh](adapter_trimming/cutadapt_wrapper_script.sh). That means they need to be in the same directory in order to work properly.
 
 ## Read alignment
-After you have trimmed the adapters from the reads, the next step is to align the reads to the genome. We use the Burrows-Wheeler Aligner Maximal Exact Match (BWA-MEM). Use [run_bwa.sh](alignment/run_bwa.sh) for this step.
+After you have trimmed the adapters from the reads, the next step is to align the reads to the genome. We use the Burrows-Wheeler Aligner Maximal Exact Match (BWA-MEM). Use [run_bwa.sh](alignment/run_bwa.sh) for this step. It will take several hours, so it is best to let this run overnight. 200 samples took about 14 hours.
 
 After the alignmet step has completed, you can use the following one-liner to make a file containing the relative paths to each `BAM` file. This will be helpful in the coming steps.
 ```bash
@@ -149,4 +149,7 @@ ls */*sorted.bam > claudia_sorted_bam_files.txt
 You can also check the file sizes for the `BAM` files with `ls -lh */*sorted.bam`. Most of the files should be in the hundreds of megabytes range (100M-400M). Some might be less (70M, for example). But if you see something exceptionall low (92 or 24K), something has gone wrong and you will want to redo the alignment _for those samples only_).
 
 ## Index `BAM` files
-Before doing the SNP calling itself, you need to index the `BAM` files using the script [index_bams.sh](index_bams.sh). It uses the file [claudia_sorted_bam_files.txt](helper_files/claudia_sorted_bam_files.txt) that you made in the previous step, so make sure the script can find that file.
+Before doing the SNP calling itself, you need to index the `BAM` files using the script [index_bams.sh](index_bams.sh). It uses the file [claudia_sorted_bam_files.txt](helper_files/claudia_sorted_bam_files.txt) that you made in the previous step, so make sure the script can find that file. For 200 samples, this will take about 35 minutes.
+
+## SNP calling
+Now, we proceed to the actual SNP-calling step. Use the script [scythe_mpileup.sh](snp_calling/scythe_mpileup.sh) to do this. Like the alignment step, this will take several hours.
