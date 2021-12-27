@@ -141,3 +141,8 @@ The script to submit for the adapter trimming is [run_cutadapt.sh](adapter_trimm
 
 ## Read alignment
 After you have trimmed the adapters from the reads, the next step is to align the reads to the genome. We use the Burrows-Wheeler Aligner Maximal Exact Match (BWA-MEM). Use [run_bwa.sh](alignment/run_bwa.sh) for this step.
+
+After the alignmet step has completed, you can use the following one-liner to make a file containing the relative paths to each _sorted_ `BAM` file. This will be helpful in the coming steps.
+```bash
+ls */*sorted.bam > claudia_sorted_bam_files.txt
+```
