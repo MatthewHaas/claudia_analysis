@@ -97,3 +97,32 @@ cat 211226_claudia_analysis_file_list_every_other.csv | cut -f 9 -d / \
 	ln -s /home/jkimball/data_delivery/umgc/2021-q4/211108_A00223_0697_BHNY3NDSX2/Kimball_Project_008/${STEM}_R2_001.fastq.gz Sample_$n/Sample_${n}_R2.fq.gz
 	done
 ```
+In the next step, we will move back to the `R` statistical environment to create a sample key.
+```R
+# Move back to R
+library(data.table)
+
+# Read in data
+x <- fread("211226_claudia_analysis_sample_names_and_numbers.csv")
+
+# Change column names
+setnames(x, c("sample_number", "sample_name"))
+
+# Add leading zeros
+x[, sample_number := sprintf("%04d", as.numeric(sample_number))]
+# Add "Sample_" to each sample number
+x[, sample_number := paste0("Sample_", sample_number)]
+
+# Remove beginning the beginning part of the filename to remove the part of the path that is no longer necessary to keep
+x[, sample_name := sub("^.+Project_008/", "", sample_name)]
+
+# Remove trailing part of filenames (sample names)---ultimately, we only need one line per sample, not two (a consequence of having 2 files per sample for paired-end reads)
+x[, sample_name := sub("_[R1].+$", "", sample_name)]
+x[, sample_name := sub("_[R2].+$", "", sample_name)]
+
+# Retain unique values only
+x <- unique(x)
+
+# Save to CSV
+write.csv(x, file="211226_claudia_analysis_sample_key.csv", row.names = FALSE, sep=",", quote=FALSE)
+```
