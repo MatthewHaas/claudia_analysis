@@ -147,3 +147,6 @@ After the alignmet step has completed, you can use the following one-liner to ma
 ls */*sorted.bam > claudia_sorted_bam_files.txt
 ```
 You can also check the file sizes for the `BAM` files with `ls -lh */*sorted.bam`. Most of the files should be in the hundreds of megabytes range (100M-400M). Some might be less (70M, for example). But if you see something exceptionall low (92 or 24K), something has gone wrong and you will want to redo the alignment _for those samples only_).
+
+## Index `BAM` files
+Before doing the SNP calling itself, you need to index the `BAM` files using the script [index_bams.sh](index_bams.sh). It uses the file [claudia_sorted_bam_files.txt](helper_files/claudia_sorted_bam_files.txt) that you made in the previous step, so make sure the script can find that file.
