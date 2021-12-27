@@ -142,7 +142,8 @@ The script to submit for the adapter trimming is [run_cutadapt.sh](adapter_trimm
 ## Read alignment
 After you have trimmed the adapters from the reads, the next step is to align the reads to the genome. We use the Burrows-Wheeler Aligner Maximal Exact Match (BWA-MEM). Use [run_bwa.sh](alignment/run_bwa.sh) for this step.
 
-After the alignmet step has completed, you can use the following one-liner to make a file containing the relative paths to each _sorted_ `BAM` file. This will be helpful in the coming steps.
+After the alignmet step has completed, you can use the following one-liner to make a file containing the relative paths to each `BAM` file. This will be helpful in the coming steps.
 ```bash
 ls */*sorted.bam > claudia_sorted_bam_files.txt
 ```
+You can also check the file sizes for the `BAM` files with `ls -lh */*sorted.bam`. Most of the files should be in the hundreds of megabytes range (100M-400M). Some might be less (70M, for example). But if you see something exceptionall low (92 or 24K), something has gone wrong and you will want to redo the alignment _for those samples only_).
