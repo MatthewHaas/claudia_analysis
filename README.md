@@ -126,3 +126,11 @@ x <- unique(x)
 # Save to CSV
 write.csv(x, file="211226_claudia_analysis_sample_key.csv", row.names = FALSE, sep=",", quote=FALSE)
 ```
+
+This next bit is just to check if the symlinks are all correct. You can do it manually (by going into each directory and typing `ls -lh`, paying special attention to the first and last to make sure the sample numbers match the "S number" in the filenames provided by UMGC. This way of checking it just quickly puts the same information into a single file so you can view them all at once. **Note:** I only did the forward reads (_R1_) because if they are correct, the reverse reads (_R2_) will also be correct.
+```bash
+for i in $(cat 211226_claudia_analysis_sample_directory_list.txt);
+do
+ls -lh ${i}/${i}_R1.fq.gz >> check_symlinks_full_paths.txt
+done
+```
