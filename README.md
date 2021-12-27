@@ -152,4 +152,4 @@ You can also check the file sizes for the `BAM` files with `ls -lh */*sorted.bam
 Before doing the SNP calling itself, you need to index the `BAM` files using the script [index_bams.sh](index_bams.sh). It uses the file [claudia_sorted_bam_files.txt](helper_files/claudia_sorted_bam_files.txt) that you made in the previous step, so make sure the script can find that file. For 200 samples, this will take about 35 minutes.
 
 ## SNP calling
-Now, we proceed to the actual SNP-calling step. Use the script [scythe_mpileup.sh](snp_calling/scythe_mpileup.sh) to do this. Like the alignment step, this will take several hours.
+Now, we proceed to the actual SNP-calling step. Use the script [scythe_mpileup.sh](snp_calling/scythe_mpileup.sh) to do this. Like the alignment step, this will take several hours. **Note:** This script uses [GNU Parallel](https://www.gnu.org/software/parallel/), so make sure you cite the program in any manuscript that uses results from these data. You can get the citation info by running `parallel --citation`. (You'll need to run `module load parallel` first.)
