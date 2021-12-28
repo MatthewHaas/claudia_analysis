@@ -2,7 +2,7 @@
 This repository contains step-by-step instructions on how to analyze genotyping-by-sequencing (GBS) data using Claudia's samples and Reneth's Itasca-C12 GWAS population.
 
 ## Contents
-[Helpful tips to get you started](#Helpful-tips-to-get-you-started)
+[Helpful tips to get you started](#Helpful-tips-to-get-you-started)<br>
 [Directory setup](#Directory-setup)<br>
 [Adapter trimming](#Adapter-trimming)<br>
 [Read alignment](#Read-alignment)<br>
