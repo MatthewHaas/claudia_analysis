@@ -1,11 +1,11 @@
 # README for claudia_analysis
 
 ## Contents
-[Directory setup](##Directory-setup)<br>
-[Adapter trimming](##Adapter-triming)<br>
-[Read alignment](##Read-alignment)<br>
-[Index BAM files](##Index-`BAM`-files)<br>
-[SNP calling](##SNP-calling)<br>
+[Directory setup](#Directory-setup)<br>
+[Adapter trimming](#Adapter-triming)<br>
+[Read alignment](#Read-alignment)<br>
+[Index BAM files](#Index-`BAM`-files)<br>
+[SNP calling](#SNP-calling)<br>
 
 
 ## Directory setup
