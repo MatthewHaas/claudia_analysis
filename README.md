@@ -203,3 +203,6 @@ One of the output files will be a `PDF` file with multiple PCA plots (through th
 <img src="images/claudia_analysis_PC1_vs_PC2.png" width="500">
 
 **Note:** Other than the key file, the other components are hard-coded into the script because they are specific to your project are: 1) plot title, 2) colors that correspond to sample types ("Resistant", "Susceptible", and "Itasca-C12"), and 3) the plot legend.
+
+## Create SNP matrix
+The conversion of the `VCF` files to a single tab-separated value (`TSV`) file containing the SNP data is done using `AWK`. The script that does the work is called [normalize.awk](create_snp_matrix/normalize.awk) and is launched using [run_normalize_awk.sh](create_snp_matrix/run_normalize_awk.sh).
