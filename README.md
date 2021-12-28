@@ -7,7 +7,7 @@ This repository contains step-by-step instructions on how to analyze genotyping-
 [Read alignment](#Read-alignment)<br>
 [Index BAM files](#Index-BAM-files)<br>
 [SNP calling](#SNP-calling)<br>
-[Filtering SNP calls](#Filtering-SNP-calls)>br>
+[Filtering SNP calls](#Filtering-SNP-calls)<br>
 
 
 ## Directory setup
