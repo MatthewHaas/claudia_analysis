@@ -15,6 +15,12 @@ This repository contains step-by-step instructions on how to analyze genotyping-
 * In order to submit a bash script (ending in `.sh`), you need to use `sbatch` followed by the script name. For example: `sbatch run_cutadapt.sh`
 * You can check the status of jobs you have running using `squeue`. For example (using your username): `squeue -u caste007`
 * If you need to cancel a job for whatever reason, use `scancel` followed by the JOBID that corresponds to the job you want to cancel. You can see this when you run `squeue`
+* Pay attention to paths. They are specific to my directory and yours will be different.
+* Make sure you are working in the global scratch drive (`/scratch.global`) to avoid using up our group's allocation which is 5 Tb as of December 2021.
+* You will need to make your own directory within `/scratch.global` to keep things clean; `cd` to that directory, then use `mkdir` to make a directroy called `caste007`. You should carry out these scripts in that directory or within a project-specific directory within `caste007`.
+* Files are removed from the global scratch drive after 30 days, so don't leave important files there. Move important files to your own computer or the Google drive.
+* Files that you want to keep permanently (important `VCF` files or figure files can move moved to the shared directory. We are trying to structure the shared directory so that it is easy to understand and find files.  For example, files from GBS analysis from 2021 should go here:` /home/jkimball/shared/sequencing/GBS/2021`. Right now, there is only one directory called `november_2021_gbs` which contains output from the work that I did for the complete set.
+* You can check how much of our storage we are using by typing: `groupquota -g jkimball`
 
 ## Directory setup
 The (raw) data are located here: `/home/jkimball/data_delivery/umgc/2021-q4/211108_A00223_0697_BHNY3NDSX2/Kimball_Project_008`.
