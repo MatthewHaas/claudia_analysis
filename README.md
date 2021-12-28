@@ -195,3 +195,5 @@ The first part tells bash to use R; the next position (technically the "0" posit
 
 One of the output files will be a `PDF` file with multiple PCA plots (through the first 8 PCs). We use `PDF` format because it is superior in terms of maintaining resolution. However, you can export to other file types including `PNG`, `JPG`, or `TIF` for presentations, publications, or to use in your own GitHub repositories like the example below (generated in the process of creating this README document).<br>
 <img src="images/claudia_analysis_PC1_vs_PC2.png" width="500">
+
+**Note:** Other than the key file, the other components are hard-coded into the script because they are specific to your project are: 1) plot title, 2) colors that correspond to sample types ("Resistant", "Susceptible", and "Itasca-C12"), and 3) the plot legend.
