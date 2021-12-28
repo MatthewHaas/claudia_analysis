@@ -21,6 +21,7 @@ This repository contains step-by-step instructions on how to analyze genotyping-
 * Files are removed from the global scratch drive after 30 days, so don't leave important files there. Move important files to your own computer or the Google drive.
 * Files that you want to keep permanently (important `VCF` files or figure files can move moved to the shared directory. We are trying to structure the shared directory so that it is easy to understand and find files.  For example, files from GBS analysis from 2021 should go here:` /home/jkimball/shared/sequencing/GBS/2021`. Right now, there is only one directory called `november_2021_gbs` which contains output from the work that I did for the complete set.
 * You can check how much of our storage we are using by typing: `groupquota -g jkimball`
+* You might notice that many of the files or directories contain a string of numbers at the beginning of the name. This represents a date in YY-MM-DD format and is a standard practice in scientific computing. The benefit is that it automatically sorts your files or directories by date.
 
 ## Directory setup
 The (raw) data are located here: `/home/jkimball/data_delivery/umgc/2021-q4/211108_A00223_0697_BHNY3NDSX2/Kimball_Project_008`.
