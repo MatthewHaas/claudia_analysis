@@ -1,7 +1,12 @@
 # README for claudia_analysis
 
 ## Contents
-[Directory setup](##Directory-setup)
+[Directory setup](##Directory-setup)<br>
+[Adapter trimming](##Adapter-triming)<br>
+[Read alignment](##Read-alignment)<br>
+[Index BAM files](##Index-`BAM`-files)<br>
+[SNP calling](##SNP-calling)<br>
+
 
 ## Directory setup
 In order to make the file with the full paths to the data (`FASTQ` files), I decided to take an iterative approach to specify which samples to include based on my knowledge of what the sample names are.
