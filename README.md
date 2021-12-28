@@ -8,6 +8,7 @@ This repository contains step-by-step instructions on how to analyze genotyping-
 [Index BAM files](#Index-BAM-files)<br>
 [SNP calling](#SNP-calling)<br>
 [Filtering SNP calls](#Filtering-SNP-calls)<br>
+[Principal component analysis](#Principal-component-analysis)<br>
 
 
 ## Directory setup
