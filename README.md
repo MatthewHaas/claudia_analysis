@@ -187,3 +187,6 @@ The first step in the pricipal component analysis (PCA) is to run the script [ru
 Rscript plot_plink_pca.R  claudia_analysis_pca.eigenvec claudia_analysis_pca.eigenval 211227_claudia_analysis.pdf 211227_claudia_analysis.Rdata
 ```
 The first part tells bash to use R; the next position (technically the "0" position is the name of the R script you want to use). The following files (positions 1, 2, 3, and 4 or `args[1]`, `args[2]`, `args[3]`, and `args[4]` in the R language) are file names that are inserted into the R script in lieu of hard-coding them into the script itself. This way, you can repeatedly use the same R script.
+
+One of the output files will be a `PDF` file with multiple PCA plots (through the first 8 PCs). We use `PDF` format because it is superior in terms of maintaining resolution. However, you can export to other file types including `PNG`, `JPG`, or `TIF` for presentations, publications, or to use in your own GitHub repositories like the example below (generated in the process of creating this README document).<br>
+<img src="images/claudia_analysis_PC1_vs_PC2.png" width="500">
