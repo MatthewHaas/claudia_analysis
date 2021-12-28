@@ -7,6 +7,7 @@ This repository contains step-by-step instructions on how to analyze genotyping-
 [Read alignment](#Read-alignment)<br>
 [Index BAM files](#Index-BAM-files)<br>
 [SNP calling](#SNP-calling)<br>
+[Filtering SNP calls](#Filtering-SNP-calls)>br>
 
 
 ## Directory setup
@@ -172,4 +173,5 @@ Anyway, use the script [filter_with_vcftools.sh](filter_with_vcftools.sh) to fil
 * Minor allele frequency is 0.03 (`--maf 0.03`)
 * No indels (`--remove-indels`)
 * Minimum depth of 8 reads required at a SNP (`--minDP 8`)
+
 **Note:** So far, most of the software programs we have been using so far have already been installed by the Minnesota Supercomputing Institute (MSI). That's why you can use them by calling `module load` and then referring to them in your code simply by calling the name of the program (e.g., `bwa`, `samtools`, or `bcftools`). `VCFtools` is different because I had to install it myself and refer to the place where it is installed in my script (`~/vcftools/bin/vcftools`) rather than just using `vcftools`.
