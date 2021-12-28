@@ -2,9 +2,9 @@
 
 ## Contents
 [Directory setup](#Directory-setup)<br>
-[Adapter trimming](#Adapter-triming)<br>
+[Adapter trimming](#Adapter-trimming)<br>
 [Read alignment](#Read-alignment)<br>
-[Index BAM files](#Index-`BAM`-files)<br>
+[Index BAM files](#Index-BAM-files)<br>
 [SNP calling](#SNP-calling)<br>
 
 
