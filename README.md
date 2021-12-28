@@ -1,4 +1,5 @@
 # README for claudia_analysis
+This repository contains step-by-step instructions on how to analyze genotyping-by-sequencing (GBS) data using Claudia's samples and Reneth's Itasca-C12 GWAS population.
 
 ## Contents
 [Directory setup](#Directory-setup)<br>
