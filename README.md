@@ -1,5 +1,8 @@
 # README for claudia_analysis
 
+## Contents
+[Directory setup](##Directory-setup)
+
 ## Directory setup
 In order to make the file with the full paths to the data (`FASTQ` files), I decided to take an iterative approach to specify which samples to include based on my knowledge of what the sample names are.
 ```bash
