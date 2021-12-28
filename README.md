@@ -2,6 +2,7 @@
 This repository contains step-by-step instructions on how to analyze genotyping-by-sequencing (GBS) data using Claudia's samples and Reneth's Itasca-C12 GWAS population.
 
 ## Contents
+[Helpful tips to get you started](#Helpful-tips-to-get-you-started)
 [Directory setup](#Directory-setup)<br>
 [Adapter trimming](#Adapter-trimming)<br>
 [Read alignment](#Read-alignment)<br>
@@ -10,6 +11,10 @@ This repository contains step-by-step instructions on how to analyze genotyping-
 [Filtering SNP calls](#Filtering-SNP-calls)<br>
 [Principal component analysis](#Principal-component-analysis)<br>
 
+## Helpful tips to get you started
+* In order to submit a bash script (ending in `.sh`), you need to use `sbatch` followed by the script name. For example: `sbatch run_cutadapt.sh`
+* You can check the status of jobs you have running using `squeue`. For example (using your username): `squeue -u caste007`
+* If you need to cancel a job for whatever reason, use `scancel` followed by the JOBID that corresponds to the job you want to cancel. You can see this when you run `squeue`
 
 ## Directory setup
 The (raw) data are located here: `/home/jkimball/data_delivery/umgc/2021-q4/211108_A00223_0697_BHNY3NDSX2/Kimball_Project_008`.
