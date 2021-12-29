@@ -25,7 +25,10 @@ This repository contains step-by-step instructions on how to analyze genotyping-
 * You might notice that many of the files or directories contain a string of numbers at the beginning of the name. This represents a date in YY-MM-DD format and is a standard practice in scientific computing. The benefit is that it automatically sorts your files or directories by date.
 
 ## Directory setup
-The (raw) data are located here: `/home/jkimball/data_delivery/umgc/2021-q4/211108_A00223_0697_BHNY3NDSX2/Kimball_Project_008`.
+The (raw) data are located here:
+```bash
+/home/jkimball/data_delivery/umgc/2021-q4/211108_A00223_0697_BHNY3NDSX2/Kimball_Project_008
+```
 
 In order to make the file with the full paths to the data (`FASTQ` files), I decided to take an iterative approach to specify which samples to include based on my knowledge of what the sample names are.
 ```bash
